@@ -11,12 +11,14 @@ import com.task5.service.GameService;
 import com.task5.storage.GameStorage;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Date;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -54,10 +56,10 @@ public class GameController {
         return ResponseEntity.ok(game);
     }
 
-    @GetMapping("/")
-    public String showTable(Model model) {
-        Map<String, Game> games = GameStorage.getInstance().getGames();
-        model.addAttribute("games", games);
-        return "/";
+    @RequestMapping(value = "/getString", method = RequestMethod.GET,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    public @ResponseBody String sendBase() {
+
+        return "I'm the nameBase";
     }
 }

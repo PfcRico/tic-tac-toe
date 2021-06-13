@@ -107,3 +107,18 @@ function connectToSpecificGame() {
         })
     }
 }
+
+function receive() {
+        var data = $.ajax({
+        type: "GET",
+        global: false,
+        dataType: 'json',
+        url: '/game/getString',
+        success: function (data){},
+            error:
+                function (error) {
+                    console.log(error);
+                }})
+
+}
+
