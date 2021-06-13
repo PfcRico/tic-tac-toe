@@ -59,7 +59,11 @@ public class GameController {
     @RequestMapping(value = "/getString", method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_VALUE)
     public @ResponseBody String sendBase() {
+        StringBuilder sb = new StringBuilder();
+        for (String s: GameStorage.getInstance().getGames().keySet()){
+            sb.append(GameStorage.getInstance().getGames().get(s).getGameId() + ";");
+        }
 
-        return "I'm the nameBase";
+        return sb.toString();
     }
 }

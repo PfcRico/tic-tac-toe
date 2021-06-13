@@ -18,7 +18,7 @@ public class GameService {
     public Game createGame(Player player) {
         Game game = new Game();
         game.setBoard(new int[3][3]);
-        game.setGameId(UUID.randomUUID().toString());
+        game.setGameId(player.getLogin());
         game.setPlayer1(player);
         game.setStatus(NEW);
         GameStorage.getInstance().setGame(game);

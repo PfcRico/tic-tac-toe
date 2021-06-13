@@ -23,10 +23,10 @@ public class GameStorage {
                 instance = new GameStorage();
                 Game game = new Game();
                 game.setBoard(new int[3][3]);
-                game.setGameId(UUID.randomUUID().toString());
                 Player player = new Player();
                 player.setLogin("kolya");
                 game.setPlayer1(player);
+                game.setGameId(player.getLogin());
                 game.setStatus(NEW);
                 GameStorage.getInstance().setGame(game);
             }
@@ -42,14 +42,4 @@ public class GameStorage {
             games.put(game.getGameId(), game);
         }
 
-        private void installGames(){
-            Game game = new Game();
-            game.setBoard(new int[3][3]);
-            game.setGameId(UUID.randomUUID().toString());
-            Player player = new Player();
-            player.setLogin("kolya");
-            game.setPlayer1(player);
-            game.setStatus(NEW);
-            GameStorage.getInstance().setGame(game);
-        }
     }
