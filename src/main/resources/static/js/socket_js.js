@@ -1,4 +1,4 @@
-const url = 'http://localhost:8080';
+const url = 'https://tictactoe-task5.herokuapp.com';
 let stompClient;
 let gameId;
 let playerType;
