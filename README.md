@@ -14,7 +14,7 @@
 
 ## Демонстрация
 
-[Демонстрация на YouTube](https://www.youtube.com/watch?v=L36qtNy2pBU)
+[Демонстрация на YouTube](https://youtu.be/Cal1cyXRet8)
 
 ## Как это было сделано
   
