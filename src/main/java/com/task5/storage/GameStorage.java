@@ -21,14 +21,6 @@ public class GameStorage {
         public static synchronized GameStorage getInstance() {
             if (instance == null) {
                 instance = new GameStorage();
-                Game game = new Game();
-                game.setBoard(new int[3][3]);
-                Player player = new Player();
-                player.setLogin("kolya");
-                game.setPlayer1(player);
-                game.setGameId(player.getLogin());
-                game.setStatus(NEW);
-                GameStorage.getInstance().setGame(game);
             }
             return instance;
         }
