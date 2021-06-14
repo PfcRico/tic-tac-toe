@@ -9,7 +9,7 @@
 ## Технологии:
   1. [Spring Boot](https://spring.io) - основной фреймворк.
   2. [Bootstrap](https://getbootstrap.com) - оформление.
-  3. [Темплейт Игры] (https://codepen.io/marxcom/pen/LWQXRX) - готовый дизайн игры из открытых источников.
+  3. [Темплейт Игры](https://codepen.io/marxcom/pen/LWQXRX) - готовый дизайн игры из открытых источников.
   
 
 ## Демонстрация
